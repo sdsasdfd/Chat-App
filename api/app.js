@@ -1,6 +1,7 @@
 import express from "express";
 import authRouter from "./routes/authRouter.js";
 import messageRouter from "./routes/messageRouter.js";
+import userRouter from "./routes/userRouter.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRouter);
 app.use("/api/messages", messageRouter);
+app.use("/api/users", userRouter);
 
 const port = process.env.PORT || 3000;
 

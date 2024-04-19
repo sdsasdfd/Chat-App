@@ -14,7 +14,7 @@ const protectedRoute = async (req, res, next) => {
     if (!decoded) {
       return res.status(401).json({ error: "Unauthorized - Invalid Token" });
     }
-    console.log(decoded);
+
     const user = decoded.userId;
 
     req.user = user;
